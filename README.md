@@ -31,7 +31,6 @@ of deleting articles of zour choosing.
 Lazarus is not necessary for the application to work. However, if you would like <br/>
 to take a look at it in Lazarus, install Lazarus 1.6.4 for this application
 
-```
 [Back To The Top](#supermarket)
 
 ---
