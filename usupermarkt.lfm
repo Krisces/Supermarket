@@ -1,0 +1,193 @@
+object FSupermarkt: TFSupermarkt
+  Left = 389
+  Height = 539
+  Top = 123
+  Width = 683
+  Caption = 'Supermarkt'
+  ClientHeight = 539
+  ClientWidth = 683
+  Color = clMenuHighlight
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -15
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '1.6.4.0'
+  object BNeu: TButton
+    Left = 25
+    Height = 25
+    Top = 320
+    Width = 135
+    Caption = 'Neuer Datensatz'
+    OnClick = BNeuClick
+    TabOrder = 0
+  end
+  object LEAnzahl: TLabeledEdit
+    Left = 590
+    Height = 26
+    Top = 200
+    Width = 66
+    Alignment = taRightJustify
+    EditLabel.AnchorSideLeft.Control = LEAnzahl
+    EditLabel.AnchorSideRight.Control = LEAnzahl
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = LEAnzahl
+    EditLabel.Left = 590
+    EditLabel.Height = 18
+    EditLabel.Top = 179
+    EditLabel.Width = 66
+    EditLabel.Caption = 'Anzahl'
+    EditLabel.ParentColor = False
+    TabOrder = 1
+  end
+  object SGDaten: TStringGrid
+    Left = 200
+    Height = 370
+    Top = 144
+    Width = 286
+    ColCount = 4
+    Columns = <    
+      item
+        Alignment = taRightJustify
+        Title.Alignment = taCenter
+        Title.Caption = 'Index'
+      end    
+      item
+        Alignment = taCenter
+        Title.Alignment = taCenter
+        Title.Caption = 'Name'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'Artikelnr.'
+        Width = 80
+      end    
+      item
+        Alignment = taRightJustify
+        Title.Alignment = taCenter
+        Title.Caption = 'Preis'
+      end>
+    FixedCols = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect, goSmoothScroll]
+    RowCount = 1
+    TabOrder = 2
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Height = -15
+    TitleFont.Name = 'Arial'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    TitleFont.Style = [fsBold]
+    OnSelectCell = SGDatenSelectCell
+  end
+  object BAendern: TButton
+    Left = 25
+    Height = 25
+    Top = 368
+    Width = 75
+    Caption = 'Ändern'
+    OnClick = BAendernClick
+    TabOrder = 3
+  end
+  object BLoeschen: TButton
+    Left = 25
+    Height = 25
+    Top = 416
+    Width = 75
+    Caption = 'Löschen'
+    OnClick = BLoeschenClick
+    TabOrder = 4
+  end
+  object LEBezeichnung: TLabeledEdit
+    Left = 25
+    Height = 26
+    Top = 168
+    Width = 135
+    EditLabel.AnchorSideLeft.Control = LEBezeichnung
+    EditLabel.AnchorSideRight.Control = LEBezeichnung
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = LEBezeichnung
+    EditLabel.Left = 25
+    EditLabel.Height = 18
+    EditLabel.Top = 147
+    EditLabel.Width = 135
+    EditLabel.Caption = 'Bezeichnung'
+    EditLabel.ParentColor = False
+    TabOrder = 5
+  end
+  object LEArtikelnr: TLabeledEdit
+    Left = 25
+    Height = 26
+    Top = 224
+    Width = 75
+    EditLabel.AnchorSideLeft.Control = LEArtikelnr
+    EditLabel.AnchorSideRight.Control = LEArtikelnr
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = LEArtikelnr
+    EditLabel.Left = 25
+    EditLabel.Height = 18
+    EditLabel.Top = 203
+    EditLabel.Width = 75
+    EditLabel.Caption = 'Artikelnr.'
+    EditLabel.ParentColor = False
+    TabOrder = 6
+  end
+  object LEPreis: TLabeledEdit
+    Left = 25
+    Height = 26
+    Top = 272
+    Width = 75
+    EditLabel.AnchorSideLeft.Control = LEPreis
+    EditLabel.AnchorSideRight.Control = LEPreis
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = LEPreis
+    EditLabel.Left = 25
+    EditLabel.Height = 18
+    EditLabel.Top = 251
+    EditLabel.Width = 75
+    EditLabel.Caption = 'Preis'
+    EditLabel.ParentColor = False
+    TabOrder = 7
+  end
+  object LEAktueller: TLabeledEdit
+    Left = 590
+    Height = 26
+    Top = 248
+    Width = 66
+    Alignment = taRightJustify
+    EditLabel.AnchorSideLeft.Control = LEAktueller
+    EditLabel.AnchorSideTop.Side = asrCenter
+    EditLabel.AnchorSideRight.Control = LEAktueller
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = LEAktueller
+    EditLabel.Left = 590
+    EditLabel.Height = 18
+    EditLabel.Top = 227
+    EditLabel.Width = 66
+    EditLabel.Caption = 'Aktueller'
+    EditLabel.ParentColor = False
+    TabOrder = 8
+  end
+  object LWalmart: TLabel
+    Left = 216
+    Height = 72
+    Top = 32
+    Width = 254
+    AutoSize = False
+    Caption = 'Walmart'
+    Color = clMenuHighlight
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -64
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+    OnClick = LWalmartClick
+  end
+end
